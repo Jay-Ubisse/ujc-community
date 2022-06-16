@@ -2,7 +2,7 @@ $(document).ready(function () {
     $("#paragraph").hide();
     $('#header').animate(
             {
-            left: "10px"
+            left: "5px"
         },
         1000,
         'easeOutBounce',
