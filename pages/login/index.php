@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entrar - UJC Community</title>
-    <link href="../styles/output.css" rel="stylesheet">
-    <link href="../styles/errors.css" rel="stylesheet">
-    <script src="../scripts/js/jquery-3.6.0.js"></script>
-    <script src="../scripts/js/jquery.validate.js"></script>
-    <script src="../scripts/js/signin.js"></script>
+    <link href="../../styles/output.css" rel="stylesheet">
+    <link href="../../styles/errors.css" rel="stylesheet">
+    <script src="../../scripts/js/jquery-3.6.0.js"></script>
+    <script src="../../scripts/js/jquery.validate.js"></script>
+    <script src="../../scripts/js/signin.js"></script>
 </head>
 
 <body>
@@ -18,13 +18,13 @@
         <h1 class=" w-1/5 font-bold text-lg ml-3 mt-2 flex"><span class="text-3xl text-white">UJC</span> <span
                 class="bg-white relative -top-1 ml-2 p-2 text-orange-500 rounded-md">Community</span></h1>
         <h3 class="absolute top-3 right-[107px] text-white font-semibold">
-            <a href="../index.html">Página Inicial</a>
+            <a href="../../">Página Inicial</a>
         </h3>
         <h3 class="absolute top-3 right-16 text-white font-semibold">
-            <a href="./faq.html">FAQ</a>
+            <a href="../faq/">FAQ</a>
         </h3>
         <h3 class="absolute top-3 right-3 text-white font-semibold">
-            <a href="./help.html">Ajuda</a>
+            <a href="../help/">Ajuda</a>
         </h3>
     </header>
     <main class="bg-slate-300 h-screen pt-20">

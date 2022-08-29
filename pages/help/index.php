@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajuda - UJC Community</title>
-    <link href="../styles/output.css" rel="stylesheet">
+    <link href="../../styles/output.css" rel="stylesheet">
 </head>
 
 <body>
@@ -14,10 +14,10 @@
         <h1 class=" w-1/5 font-bold text-lg ml-3 mt-2 flex"><span class="text-3xl text-white">UJC</span> <span
                 class="bg-white relative -top-1 ml-2 p-2 text-orange-500 rounded-md">Community</span></h1>
         <h3 class="absolute top-3 right-16 text-white font-semibold">
-            <a href="../index.html">Página Inicial</a>
+            <a href="../../">Página Inicial</a>
         </h3>
         <h3 class="absolute top-3 right-3 text-white font-semibold">
-            <a href="./faq.html">FAQ</a>
+            <a href="../faq/">FAQ</a>
         </h3>
     </header>
     <main class="bg-slate-300 min-h-screen p-1">
