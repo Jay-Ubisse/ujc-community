@@ -3,7 +3,7 @@ $(document).ready(function () {
         rules: {
             code: {
                 required: true,
-                rangelength: [6,6],
+                rangelength: [7,7],
                 number: true
             },
             password: {
@@ -14,7 +14,7 @@ $(document).ready(function () {
         messages: {
             code: {
                 required: "Introduza o seu código de estudante",
-                rangelength:"O código de estudante deve ter 6 dígitos",
+                rangelength:"O código de estudante deve ter 7 dígitos",
                 number: "O código de estudante deve contar apenas dígitos"
 
             },

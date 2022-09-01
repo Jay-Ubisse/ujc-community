@@ -48,7 +48,7 @@ $check_result = $dbcon->query($check_query);
                         </p>\n";
                 } else {
                     $save_query = "INSERT INTO users (code, name, email, course, level, password) 
-                                    VALUES ($_code, '$_name', '$_email', '$_course', '$_level', '$_password')";
+                                    VALUES ($_code, '$_name', '$_email', '$_course', '$_level', PASSWORD('$password'))";
                     $check_result = $dbcon->query($save_query);
                     echo "<h2 class='text-lg font-bold'>Registrado com sucesso!</h2>\n";
                     echo "<p class='text-sm'><a href=\"../../pages/login.html\" class='text-slate-200'>Cique aqui</a> para entrar.</p>\n";

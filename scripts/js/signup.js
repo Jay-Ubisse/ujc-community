@@ -6,7 +6,7 @@ $(document).ready(function () {
             },
             code: {
                 required: true,
-                rangelength: [6,6],
+                rangelength: [7,7],
                 number: true
             },
             email: {
@@ -27,7 +27,7 @@ $(document).ready(function () {
             },
             code: {
                 required: "Introduza o seu código de estudante",
-                rangelength:"O código de estudante deve ter 6 dígitos",
+                rangelength:"O código de estudante deve ter 7 dígitos",
                 number: "O código de estudante deve contar apenas dígitos"
 
             },

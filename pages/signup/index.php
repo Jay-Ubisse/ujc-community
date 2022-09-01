@@ -1,3 +1,8 @@
+<?php
+    require "../../scripts/php/db_connection/connect.php";
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +33,36 @@
         </h3>
     </header>
     <main class="bg-slate-300 h-screen pt-20">
-        <form method="post" action="../scripts/php/signup.php" class="bg-slate-400 py-10 w-2/4 mx-auto rounded-md" id="signup">
+        <?php
+
+            if(isset($_POST['code']) || isset($_POST['password'])) {
+                $_name = $_POST["name"];
+                $_code = $_POST["code"];
+                $_email = $_POST["email"];
+                $_course = $_POST["course"];
+                $_level = $_POST["level"];
+                $_password = $_POST["password"];
+
+                $check_query = "SELECT * FROM users where code = $_code";
+                $check_result = $dbcon->query($check_query);
+
+                if ($check_result->num_rows > 0) {
+                    echo "<h2 class='text-lg font-bold'>Código de estudante já registrado!</h2>\n";
+                    echo "<p class='text-sm'>
+                            <a href=\"../../pages/signup.html\" class='text-slate-200'>Cique aqui</a> para voltar a tentar.
+                            Se já tem uma conta, <a href=\"../../pages/login.html\" class='text-slate-200'>cique aqui</a> para entrar.
+                        </p>\n";
+                } else {
+                    $save_query = "INSERT INTO users (code, name, email, course, level, password) 
+                                    VALUES ($_code, '$_name', '$_email', '$_course', '$_level', '$_password')";
+                    $check_result = $dbcon->query($save_query);
+                    echo "<h2 class='text-lg font-bold'>Registrado com sucesso!</h2>\n";
+                    echo "<p class='text-sm'><a href=\"../../pages/login.html\" class='text-slate-200'>Cique aqui</a> para entrar.</p>\n";
+                }
+                $dbcon->close();
+            }
+        ?>
+        <form method="post" action="index.php" class="bg-slate-400 py-10 w-2/4 mx-auto rounded-md" id="signup">
             <fieldset class="w-fit mx-auto">
                 <label for="name" class="font-semibold">Nome</label>
                 <input type="text" name="name" class="mb-3 ml-2 bg-slate-200 rounded-sm px-2 focus:outline-orange-500"><br>
