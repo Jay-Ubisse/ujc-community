@@ -1,6 +1,5 @@
 <?php
     require "../../scripts/php/db_connection/connect.php";
-    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +31,7 @@
             <a href="../help/">Ajuda</a>
         </h3>
     </header>
-    <main class="bg-slate-300 h-screen pt-20">
+    <main class="bg-slate-300 h-screen pt-10">
         <?php
 
             if(isset($_POST['code']) || isset($_POST['password'])) {
@@ -47,17 +46,24 @@
                 $check_result = $dbcon->query($check_query);
 
                 if ($check_result->num_rows > 0) {
-                    echo "<h2 class='text-lg font-bold'>Código de estudante já registrado!</h2>\n";
-                    echo "<p class='text-sm'>
-                            <a href=\"../../pages/signup.html\" class='text-slate-200'>Cique aqui</a> para voltar a tentar.
-                            Se já tem uma conta, <a href=\"../../pages/login.html\" class='text-slate-200'>cique aqui</a> para entrar.
-                        </p>\n";
+                ?>
+                    <div class='bg-green-400 rounded-md w-1/3 mx-auto py-4 mb-2 flex flex-col items-center'>
+                        <h2 class='text-lg font-bold'>Código de estudante já registrado!</h2>
+                        <p class='text-sm'>
+                            Tente de novo. Se já tem uma conta, <a href="../login/" class='text-slate-200'>cique aqui</a> para entrar.
+                        </p>
+                    </div>
+                <?php
                 } else {
                     $save_query = "INSERT INTO users (code, name, email, course, level, password) 
                                     VALUES ($_code, '$_name', '$_email', '$_course', '$_level', '$_password')";
                     $check_result = $dbcon->query($save_query);
-                    echo "<h2 class='text-lg font-bold'>Registrado com sucesso!</h2>\n";
-                    echo "<p class='text-sm'><a href=\"../../pages/login.html\" class='text-slate-200'>Cique aqui</a> para entrar.</p>\n";
+                ?>
+                    <div class='bg-green-400 rounded-md w-1/3 mx-auto py-4 mb-2 flex flex-col items-center'>
+                        <h2 class='text-lg font-bold'>Registrado com sucesso!</h2>
+                        <p class='text-sm'><a href="../login/" class='text-slate-200'>Cique aqui</a> para entrar.</p>
+                    </div>
+                <?php
                 }
                 $dbcon->close();
             }
@@ -91,7 +97,7 @@
                     <input type="submit" value="Registar-se" class="bg-orange-500 py-1 px-2 rounded-md text-white">
                     <input type="reset" value="Repor" class="bg-orange-500 py-1 px-2 rounded-md text-white">
                 </div>
-                <p class="w-fit mx-auto">Já tem uma conta? <a href="./login.html" class="text-orange-700 font-semibold">Clique aqui</a> entrar.</p>
+                <p class="w-fit mx-auto">Já tem uma conta? <a href="../login/" class="text-orange-700 font-semibold">Clique aqui</a> entrar.</p>
             </fieldset>
 
         </form>
