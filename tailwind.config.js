@@ -6,7 +6,11 @@ module.exports = {
     './index.html',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        rob: 'Roboto, sans-serif'
+      }
+    },
   },
   plugins: [],
 }
