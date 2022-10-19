@@ -19,15 +19,17 @@
 
 <body>
     <header class="bg-orange-500 h-16 w-full m-0 p-1">
-        <h1 class=" w-1/5 font-bold text-lg ml-3 mt-2 flex"><span class="text-3xl text-white">UJC</span> <span
-                class="bg-white relative -top-1 ml-2 p-2 text-orange-500 rounded-md">Community</span></h1>
-        <h3 class="absolute top-3 right-[107px] text-white font-semibold">
+        <h1 class="w-1/5 font-bold md:text-lg md:ml-3 ml-[2px] mt-2 flex">
+            <span class="md:text-3xl text-2xl text-white">UJC</span>
+            <span class="bg-white relative md:-top-1 md:ml-2 ml-1 md:p-2 p-1 text-orange-500 rounded-md">Community</span>
+        </h1>
+        <h3 class="absolute md:top-3 top-4 md:right-[107px] right-[83px] text-white font-semibold md:text-lg text-sm">
             <a href="../../">Página Inicial</a>
         </h3>
-        <h3 class="absolute top-3 right-16 text-white font-semibold">
+        <h3 class="absolute md:top-3 top-4 md:right-16 right-12 text-white font-semibold md:text-lg text-sm">
             <a href="../faq/">FAQ</a>
         </h3>
-        <h3 class="absolute top-3 right-3 text-white font-semibold">
+        <h3 class="absolute md:top-3 top-4 md:right-3 right-1 text-white font-semibold md:text-lg text-sm">
             <a href="../help/">Ajuda</a>
         </h3>
     </header>
@@ -68,36 +70,36 @@
                 $dbcon->close();
             }
         ?>
-        <form method="post" action="index.php" class="bg-slate-400 py-10 w-2/4 mx-auto rounded-md" id="signup">
-            <fieldset class="w-fit mx-auto">
-                <label for="name" class="font-semibold">Nome</label>
+        <form method="post" action="index.php" class="bg-slate-400 py-10 md:w-2/4 w-11/12 mx-auto rounded-md" id="signup">
+            <fieldset class="md:w-fit w-[89%] mx-auto">
+                <label for="name" class="font-semibold md:ml-0 ml-2">Nome</label>
                 <input type="text" name="name" class="mb-3 ml-2 bg-slate-200 rounded-sm px-2 focus:outline-orange-500"><br>
-                <label for="code" class="font-semibold">Código de estudante</label>
+                <label for="code" class="font-semibold md:ml-0 ml-2">Código de estudante</label>
                 <input type="number" name="code" class="mb-3 ml-2 bg-slate-200 rounded-sm px-2 focus:outline-orange-500"><br>
-                <label for="email" class="font-semibold">Email</label>
+                <label for="email" class="font-semibold md:ml-0 ml-2">Email</label>
                 <input type="email" name="email" class="mb-3 ml-2 bg-slate-200 rounded-sm px-2 focus:outline-orange-500"><br>
-                <label for="course" class="font-semibold">Curso</label>
+                <label for="course" class="font-semibold md:ml-0 ml-2">Curso</label>
                 <select name="course" class="mb-3 ml-2 bg-slate-200 rounded-sm px-2 focus:outline-orange-500">
-                    <option value="rid">RID</option>
-                    <option value="ap">AP</option>
-                    <option value="etsi">ETSI</option>
+                    <option value="rid">AP</option>
+                    <option value="ap">ETSI</option>
+                    <option value="etsi">RID</option>
                 </select><br>
-                <label for="level" class="font-semibold">Ano</label>
+                <label for="level" class="font-semibold md:ml-0 ml-2">Ano</label>
                 <select name="level" class="mb-3 ml-2 bg-slate-200 rounded-sm px-2 focus:outline-orange-500">
                     <option value="first">1º ano</option>
                     <option value="second">2º ano</option>
                     <option value="third">3º ano</option>
                     <option value="forth">4º ano</option>
                 </select><br>
-                <label for="password" class="font-semibold">Palavra-Passe</label>
+                <label for="password" class="font-semibold md:ml-0 ml-2">Palavra-Passe</label>
                 <input type="password" name="password" id="password" class="mb-3 ml-2 bg-slate-200 rounded-sm px-2 focus:outline-orange-500"><br>
-                <label for="confirmpassword" class="font-semibold">Confirmar Palavra-Passe</label>
+                <label for="confirmpassword" class="font-semibold md:ml-0 ml-2">Confirmar Palavra-Passe</label>
                 <input type="password" name="confirmpassword" class="mb-3 ml-2 bg-slate-200 rounded-sm px-2 focus:outline-orange-500">
                 <div class="w-fit mx-auto my-4">
                     <input type="submit" value="Registar-se" class="bg-orange-500 py-1 px-2 rounded-md text-white">
                     <input type="reset" value="Repor" class="bg-orange-500 py-1 px-2 rounded-md text-white">
                 </div>
-                <p class="w-fit mx-auto">Já tem uma conta? <a href="../login/" class="text-orange-700 font-semibold">Clique aqui</a> entrar.</p>
+                <p class="w-fit mx-auto md:text-base text-sm">Já tem uma conta? <a href="../login/" class="text-orange-700 font-semibold">Clique aqui</a> entrar.</p>
             </fieldset>
 
         </form>
