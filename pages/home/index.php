@@ -16,6 +16,8 @@ $data = $_SESSION["login"];
     <title>Página Inicial - UJC Community</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="../../styles/output.css" rel="stylesheet">
+    <script src="../../scripts/js/jquery-3.6.0.js"></script>
+    <script src="../../scripts/js/home.js"></script>
 </head>
 
 <body>
@@ -25,33 +27,49 @@ $data = $_SESSION["login"];
             <span class="bg-white relative md:-top-1 md:ml-2 ml-1 md:p-2 p-1 text-orange-500 rounded-md">Community</span>
         </h1>
         <div class="absolute top-3 right-16">
-            <input type="search" placeholder="pesquisar" class="bg-slate-200 mt-1 rounded-xl px-3 text-slate-700 font-light focus:outline-orange-500 focus:outline-1 outline-transparent" />
+            <input type="search" placeholder="pesquisar" class="bg-slate-200 md:flex hidden mt-1 rounded-xl px-3 text-slate-700 font-light focus:outline-orange-500 focus:outline-1 outline-transparent" />
         </div>
         <h3 class="absolute top-3 right-3 text-white font-bold md:text-lg text-sm hover:text-gray-200">
-            <a href="#">Sair</a>
+            <a href="#" id="logout-icon">Icone</a>
         </h3>
+        <div id="logout" class="absolute top-8 right-2 md:top-9 rounded-bl-sm rounded-br-sm z-50 bg-slate-300 text-slate-700 font-bold md:text-sm text-xs px-3">
+            <h3 class="hover:text-orange-500 py-2">Definições</h3>
+            <h3 class="hover:text-orange-500 py-2">Sair</h3>
+        </div>
     </header>
     <main class="bg-slate-200 md:h-screen h-[calc(100vh-64px)] flex md:flex-row flex-col-reverse md:place-content-start place-content-between font-rob relative">
-        <aside class="md:h-screen md:w-[20%] w-screen flex md:flex-col flex-row md:relative fixed z-50 bg-orange-500 mt-1">
-            <div class="h-24 w-24 rounded-full bg-slate-200 mx-auto mt-2 flex items-center justify-center">
+        <aside class="md:h-screen md:w-[20%] w-screen md:flex hidden md:flex-col bg-orange-500 mt-1">
+            <div class="h-24 w-24 rounded-full bg-slate-200 mx-auto mt-2 md:flex hidden items-center justify-center">
                 <strong>FOTO</strong>
             </div>
-            <h1 class="text-center text-white font-bold text-lg mt-2 pb-5 border-b border-b-slate-200">Bem vindo(a), <?php echo $data["name"] ?></h1>
+            <h1 class="text-center text-white font-bold text-lg mt-2 pb-5 border-b md:flex hidden border-b-slate-200">Bem vindo(a), <?php echo $data["name"] ?></h1>
             <div>
-                <h2 class="text-center text-white font-bold text-lg mt-5 mb-5 hover:text-yellow-800 hover:text-2xl transition-transform"><a href="#">Início</a></h2>
+                <h2 class="md:block hidden text-center text-white font-bold text-lg mt-5 mb-5 hover:text-yellow-800 hover:text-2xl transition-transform"><a href="#">Início</a></h2>
+                <span class="md:hidden"><a href="#">Hom</a></span>
             </div>
             <div>
-                <h2 class="text-center text-white font-bold text-lg mb-5 hover:text-yellow-800  hover:text-2xl transition-transform"><a href="#">Perfil</a></h2>
+                <h2 class="md:block hidden text-center text-white font-bold text-lg mb-5 hover:text-yellow-800  hover:text-2xl transition-transform"><a href="#">Perfil</a></h2>
+                <span class="md:hidden"><a href="#">Perf</a></span>
             </div>
             <div>
-                <h2 class="text-center text-white font-bold text-lg mb-5 hover:text-yellow-800  hover:text-2xl transition-transform"><a href="#">Notificações</a></h2>
+                <h2 class="md:block hidden text-center text-white font-bold text-lg mb-5 hover:text-yellow-800  hover:text-2xl transition-transform"><a href="#">Notificações</a></h2>
+                <span class="md:hidden"><a href="#">Not</a></span>
             </div>
             <div>
-                <h1 class="text-center text-white font-bold text-lg mb-5 hover:text-yellow-800  hover:text-2xl transition-transform"><a href="#">Mensagens</a></h1>
+                <h1 class="md:block hidden text-center text-white font-bold text-lg mb-5 hover:text-yellow-800  hover:text-2xl transition-transform"><a href="#">Mensagens</a></h1>
+                <span class="md:hidden"><a href="#">Msg</a></span>
             </div>
             <div>
-                <h2 class="text-center text-white font-bold text-lg mb-5 hover:text-yellow-800  hover:text-2xl transition-transform"><a href="#">Definições</a></h2>
+                <h2 class="md:block hidden text-center text-white font-bold text-lg mb-5 hover:text-yellow-800  hover:text-2xl transition-transform"><a href="#">Explorar</a></h2>
+                <span class="md:hidden"><a href="#">Def</a></span>
             </div>
+        </aside>
+        <aside class="md:hidden w-screen flex place-content-between p-3 text-white fixed bottom-0 z-50 bg-orange-500 mt-1">
+            <span class="md:hidden"><a href="#">Hom</a></span>
+            <span class="md:hidden"><a href="#">Perf</a></span>
+            <span class="md:hidden"><a href="#">Not</a></span>
+            <span class="md:hidden"><a href="#">Msg</a></span>  
+            <span class="md:hidden"><a href="#">Def</a></span>  
         </aside>
         <section class="md:relative absolute top-0">
             <h1>Conteudo</h1>
