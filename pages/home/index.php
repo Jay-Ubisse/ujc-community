@@ -14,6 +14,7 @@ $data = $_SESSION["login"];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial - UJC Community</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="../../styles/output.css" rel="stylesheet">
     <script src="../../scripts/js/jquery-3.6.0.js"></script>
@@ -26,13 +27,15 @@ $data = $_SESSION["login"];
             <span class="md:text-3xl text-2xl text-white">UJC</span>
             <span class="bg-white relative md:-top-1 md:ml-2 ml-1 md:p-2 p-1 text-orange-500 rounded-md">Community</span>
         </h1>
-        <div class="absolute top-3 right-16">
+        <div class="absolute top-3 flex right-16 text-slate-700">
             <input type="search" placeholder="pesquisar" class="bg-slate-200 md:flex hidden mt-1 rounded-xl px-3 text-slate-700 font-light focus:outline-orange-500 focus:outline-1 outline-transparent" />
+            <i class="fa-solid fa-magnifying-glass relative top-2 right-7"></i>
         </div>
-        <h3 class="absolute top-3 right-3 text-white font-bold md:text-lg text-sm hover:text-gray-200">
-            <a href="#" id="logout-icon">Icone</a>
-        </h3>
-        <div id="logout" class="absolute top-8 right-2 md:top-9 rounded-bl-sm rounded-br-sm z-50 bg-slate-300 text-slate-700 font-bold md:text-sm text-xs px-3">
+        <div class="absolute top-3 right-3 text-white font-bold md:text-lg text-sm hover:text-gray-200">
+            <span class="bg-gray-300 w-14 h-14 rounded-full"></span>
+            <i class="fa-sharp fa-solid fa-caret-down relative right-5" id="logout-icon"></i>
+        </div>
+        <div id="logout" class="absolute top-8 right-2 md:top-10 rounded-bl-sm rounded-br-sm z-50 bg-slate-300 text-slate-700 font-bold md:text-sm text-xs px-3">
             <h3 class="hover:text-orange-500 py-2">Definições</h3>
             <h3 class="hover:text-orange-500 py-2">Sair</h3>
         </div>
@@ -68,8 +71,8 @@ $data = $_SESSION["login"];
             <span class="md:hidden"><a href="#">Hom</a></span>
             <span class="md:hidden"><a href="#">Perf</a></span>
             <span class="md:hidden"><a href="#">Not</a></span>
-            <span class="md:hidden"><a href="#">Msg</a></span>  
-            <span class="md:hidden"><a href="#">Def</a></span>  
+            <span class="md:hidden"><a href="#">Msg</a></span>
+            <span class="md:hidden"><a href="#">Def</a></span>
         </aside>
         <section class="md:relative absolute top-0">
             <h1>Conteudo</h1>
