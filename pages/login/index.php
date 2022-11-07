@@ -50,12 +50,12 @@ session_start();
                 echo "<h2>Código de usuário inválido!</h2>\n";
             } else {
                 $row = $check_result->fetch_assoc();
-                $_SESSION["login"] = $row;
                 $pass = $row['password'];
 
                 if ($pass !== $_password) {
                     echo "<h2>Palavra-passe inválida!</h2>\n";
                 } else {
+                    $_SESSION["login"] = $row;
                     header("location: ../home");
                 }
             }
