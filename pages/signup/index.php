@@ -42,7 +42,7 @@
                 $_email = $_POST["email"];
                 $_course = $_POST["course"];
                 $_level = $_POST["level"];
-                $_password = $_POST["password"];
+                $_password = hash("sha256", $_POST["password"]);
 
                 $check_query = "SELECT * FROM users where code = $_code";
                 $check_result = $dbcon->query($check_query);
