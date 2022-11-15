@@ -2,7 +2,7 @@
 require "../../../server/config/connect.php";
 session_start();
 
-$userData = $_SESSION["login"];
+$userPersonalData = $_SESSION["login"];
 ?>
 <!DOCTYPE html>
 <html lang="en">

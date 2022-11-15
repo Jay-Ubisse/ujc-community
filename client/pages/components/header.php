@@ -12,7 +12,7 @@
             </div>
             <div>
                 <div id="logoutSection" class="text-white font-bold md:text-lg text-sm hover:text-gray-200 cursor-pointer">
-                    <span><?php echo $userData["name"]; ?></span>
+                    <span><?php echo $userPersonalData["name"]; ?></span>
                     <span><i class="fa-sharp fa-solid fa-caret-down"></i></span>
                 </div>
                 <div id="logout" class="md:rounded-bl-sm rounded-br-sm z-50 bg-slate-300 text-slate-700 font-bold md:text-sm text-xs">

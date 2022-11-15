@@ -6,21 +6,30 @@
         $_code = $_POST["code"];
         $_password = hash("sha256", $_POST["password"]);
 
-        $check_query = "SELECT * FROM users where code = $_code";
-        $check_result = $dbcon->query($check_query);
+        // getting user personal data
+        $fetchPersonalDataQuery = "SELECT * FROM users where code = $_code";
+        $personalDataResult = $dbcon->query($fetchPersonalDataQuery);
 
-        if ($check_result->num_rows == 0) {
+        if ($personalDataResult->num_rows == 0) {
             $_SESSION['auth'] = "Código de usuário inválido!";
             header("location: ../../client/pages/login");
         } else {
-            $row = $check_result->fetch_assoc();
-            $pass = $row['password'];
+            $personalDataRow = $personalDataResult->fetch_assoc();
+            $pass =  $personalDataRow['password'];
 
             if ($pass !== $_password) {
                 $_SESSION['auth'] = "Palavra-passe inválida!";
                 header("location: ../../client/pages/login");
             } else {
-                $_SESSION["login"] = $row;
+
+                //getting user social media data
+                $fetchUserSocialQuery = "SELECT * FROM social where code = $_code";
+                $userSocialResult= $dbcon->query($fetchUserSocialQuery);
+                $userSocialRow = $userSocialResult->fetch_assoc();
+
+                //creating session with the data fetched from the database
+                $_SESSION['socialMedia'] = $userSocialRow;
+                $_SESSION["login"] =  $personalDataRow;
                 header("location: ../../client/pages/home");
             }
         }

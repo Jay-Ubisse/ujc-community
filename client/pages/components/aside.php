@@ -2,7 +2,7 @@
     <div class="h-24 w-24 rounded-full bg-slate-200 mx-auto mt-2 md:flex hidden items-center justify-center">
         <strong>FOTO</strong>
     </div>
-    <h1 class="text-center text-white font-bold text-lg mt-2 pb-5 border-b border-b-slate-200 w-11/12 mx-auto"><?php echo $userData["name"] ?></h1>
+    <h1 class="text-center text-white font-bold text-lg mt-2 pb-5 border-b border-b-slate-200 w-11/12 mx-auto"><?php echo $userPersonalData["name"] ?></h1>
     <table class="w-fit mx-auto mt-6 text-white text-lg">
         <tr class="hover:text-orange-800 hover:text-xl transition-transform">
             <td>
