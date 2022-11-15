@@ -1,5 +1,5 @@
 <?php
-    require "../../scripts/php/db_connection/connect.php";
+    require "../../../server/config/connect.php";
 ?>
 
 <!DOCTYPE html>

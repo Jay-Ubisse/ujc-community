@@ -1,10 +1,11 @@
 $(document).ready(function () {
-    let logoutState = $("#logout").hide();
-    $("#logout-icon").click(function() {
+    let logoutState = $("#logout");
+    logoutState.hide();
+    $("#logoutSection").click(function() {
         if (logoutState.is(':hidden')) {
-            $("#logout").slideDown(500);
+            $("#logout").slideDown(200);
         } else {
-            $("#logout").slideDown(500);
+            $("#logout").slideUp(200);
         }
     });
 });
