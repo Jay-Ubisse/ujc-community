@@ -37,33 +37,14 @@ session_start();
     </header>
     <main class="bg-slate-300 h-screen pt-20">
 
-        <?php
+            <?php
+                if(isset($_SESSION["auth"]) ) {
+                    echo $_SESSION["auth"];
+                    unset($_SESSION["auth"]);
+                } 
+            ?>
 
-        if (isset($_POST['code']) || isset($_POST['password'])) {
-            $_code = $_POST["code"];
-            $_password = hash("sha256", $_POST["password"]);
-
-            $check_query = "SELECT * FROM users where code = $_code";
-            $check_result = $dbcon->query($check_query);
-
-            if ($check_result->num_rows == 0) {
-                echo "<h2>Código de usuário inválido!</h2>\n";
-            } else {
-                $row = $check_result->fetch_assoc();
-                $pass = $row['password'];
-
-                if ($pass !== $_password) {
-                    echo "<h2>Palavra-passe inválida!</h2>\n";
-                } else {
-                    $_SESSION["login"] = $row;
-                    header("location: ../home");
-                }
-            }
-            $dbcon->close();
-        }
-        ?>
-
-        <form method="post" action="index.php" class="bg-slate-400 py-10 md:w-2/4 w-11/12 mx-auto rounded-md" id="signin">
+        <form method="post" action="../../../server/src/login.php" class="bg-slate-400 py-10 md:w-2/4 w-11/12 mx-auto rounded-md" id="signin">
             <fieldset class="md:w-fit w-[89%] mx-auto">
                 <label for="code" class="font-semibold md:ml-0 ml-2">Código de estudante</label>
                 <input type="number" name="code" class="mb-3 ml-2 bg-slate-200 rounded-sm px-2 focus:outline-orange-500"><br>
