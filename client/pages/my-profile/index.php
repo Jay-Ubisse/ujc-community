@@ -77,7 +77,7 @@ $userSocialData = $_SESSION["socialMedia"];
                                 }
                             ?>
                         </p>
-                        <button class="bg-orange-500 text-white font-semibold py-2 px-5 rounded-md mt-3"><a href="#">Editar perfil</a></button>
+                        <button class="bg-orange-500 text-white font-semibold py-2 px-5 rounded-md mt-3"><a href="../edit-profile/">Editar perfil</a></button>
                     </div>
                 </section>
                 <!-- about section -->
