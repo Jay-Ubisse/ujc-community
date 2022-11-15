@@ -16,8 +16,7 @@
                     <span><i class="fa-sharp fa-solid fa-caret-down"></i></span>
                 </div>
                 <div id="logout" class="md:rounded-bl-sm rounded-br-sm z-50 bg-slate-300 text-slate-700 font-bold md:text-sm text-xs">
-                    <p><a href="#" class="w-full py-3 m-0 px-2 inline-block hover:bg-orange-500">Definicoes</a></p>
-                    <p><a href="../../../server/src/logout-route.php" class="w-full py-3 px-2 m-0 inline-block hover:bg-orange-500">Sair</a></p>
+                    <p><a href="../../../server/src/logout-route.php" class="w-full h-full py-3 m-0 px-2 inline-block hover:bg-orange-500">Sair</a></p>
                 </div>
             </div>
         </section>

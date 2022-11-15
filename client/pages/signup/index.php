@@ -80,9 +80,9 @@
                 <input type="email" name="email" class="mb-3 ml-2 bg-slate-200 rounded-sm px-2 focus:outline-orange-500"><br>
                 <label for="course" class="font-semibold md:ml-0 ml-2">Curso</label>
                 <select name="course" class="mb-3 ml-2 bg-slate-200 rounded-sm px-2 focus:outline-orange-500">
-                    <option value="rid">AP</option>
-                    <option value="ap">ETSI</option>
-                    <option value="etsi">RID</option>
+                    <option value="ap">AP</option>
+                    <option value="etsi">ETSI</option>
+                    <option value="rid">RID</option>
                 </select><br>
                 <label for="level" class="font-semibold md:ml-0 ml-2">Ano</label>
                 <select name="level" class="mb-3 ml-2 bg-slate-200 rounded-sm px-2 focus:outline-orange-500">

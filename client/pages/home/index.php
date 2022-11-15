@@ -18,42 +18,19 @@ $userData = $_SESSION["login"];
     <script src="https://kit.fontawesome.com/4b43862993.js" crossorigin="anonymous"></script>
     <link href="../../styles/output.css" rel="stylesheet">
     <script src="../../scripts/js/jquery-3.6.0.js"></script>
-    <script src="../../scripts/js/home.js"></script>
+    <script src="../../scripts/js/global.js"></script>
 </head>
 
 <body class="font-rob">
     <header>
         <?php include "../components/header.php"; ?>
     </header>
-    <main class="bg-slate-200 h-[calc(100vh-64px)] flex flex-row">
-        <aside>
+    <main class="bg-slate-200 h-[calc(100vh-64px)] flex flex-row gap-3">
+        <aside class="w-[20%]">
             <?php include "../components/aside.php"; ?>
         </aside>
-        <article class="border border-black mt-1">
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
-            <h1>Conteudo</h1>
+        <article class="w-[80%]">
+            <h1 class="font-bold text-4xl w-fit mx-auto">Feed Noticias</h1>
         </article>
     </main>
 </body>
