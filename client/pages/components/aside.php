@@ -1,6 +1,6 @@
 <div class="h-full flex flex-col bg-orange-500 mt-1 px-3">
     <div class="h-24 w-24 rounded-full bg-slate-200 mx-auto mt-2 md:flex hidden items-center justify-center">
-        <strong>FOTO</strong>
+    <img src="<?php echo $profPicDir . $userPersonalData["image"] ?>" alt="foto de perfil" class="overflow-hidden w-full rounded-full h-full">
     </div>
     <h1 class="text-center text-white font-bold text-lg mt-2 pb-5 border-b border-b-slate-200 w-11/12 mx-auto"><?php echo $userPersonalData["name"] ?></h1>
     <table class="w-fit mx-auto mt-6 text-white text-lg">
@@ -33,7 +33,7 @@
                 <span><i class="fa-solid fa-envelope"></i></span>
             </td>
             <td>
-                <h1 class="font-bold m-4"><a href="#">Mensagens</a></h1>
+                <h1 class="font-bold m-4"><a href="../messages/">Mensagens</a></h1>
             </td>
         </tr>
         <tr class="hover:text-orange-800 hover:text-xl transition-transform">

@@ -4,6 +4,8 @@ session_start();
 
 $userPersonalData = $_SESSION["login"];
 $userSocialData = $_SESSION["socialMedia"];
+
+$profPicDir = "../../img/profile/"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +36,7 @@ $userSocialData = $_SESSION["socialMedia"];
             <div class="w-4/5 mx-auto mt-5">
                 <section class="flex flex-row gap-5">
                     <div class="h-36 w-36 rounded-full bg-black text-slate-200 mt-2 flex  items-center justify-center">
-                        <strong>FOTO</strong>
+                        <img src="<?php echo $profPicDir . $userPersonalData["image"] ?>" alt="foto de perfil" class="overflow-hidden w-full rounded-full h-full">
                     </div>
                     <div class="mt-5">
                         <h1 class="font-bold text-2xl mt-2 pb-3 border-b border-b-slate-200"><?php echo $userPersonalData["name"] ?></h1>
@@ -80,6 +82,7 @@ $userSocialData = $_SESSION["socialMedia"];
                         <button class="bg-orange-500 text-white font-semibold py-2 px-5 rounded-md mt-3"><a href="../edit-profile/">Editar perfil</a></button>
                     </div>
                 </section>
+
                 <!-- about section -->
                 <section class="mt-10">
                     <h1 class="bg-slate-500 text-slate-200 w-full text-center text-lg font-semibold mb-5">Sobre mim</h1>

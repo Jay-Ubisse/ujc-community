@@ -29,11 +29,25 @@ $userSocialData = $_SESSION["socialMedia"];
             <?php include "../components/aside.php"; ?>
         </aside>
         <article class="w-[80%] p-1 overflow-scroll">
+            <?php
+                if(isset($_SESSION["edit-error"]) ) {
+                    echo $_SESSION["edit-error"];
+                    unset($_SESSION["edit-error"]);
+                } 
+            ?>
             <h1 class="w-fit mx-auto font-bold text-3xl my-5">Editar dados</h1>
-            <form method="post" action="" class="w-11/12 mx-auto">
+            <form method="post" action="../../../server/src/edit-profile.php" enctype="multipart/form-data" class="w-11/12 mx-auto">
                 <fieldset>
                     <legend class="font-bold text-xl mb-4">Dados pessoais</legend>
                     <table class=" w-fit mx-auto">
+                    <tr>
+                        <td>
+                            Foto de perfil
+                        </td>
+                        <td>
+                            <input type="file" name="image">
+                        </td>
+                    </tr>
                     <tr>
                         <td>
                             Nome
@@ -47,7 +61,7 @@ $userSocialData = $_SESSION["socialMedia"];
                             email
                         </td>
                         <td>
-                            <input type="text" name="name" value="<?php echo $userPersonalData["email"]; ?>">
+                            <input type="text" name="email" value="<?php echo $userPersonalData["email"]; ?>">
                         </td>
                     </tr>
                     <tr>
@@ -55,8 +69,8 @@ $userSocialData = $_SESSION["socialMedia"];
                             Celular
                         </td>
                         <td>
-                            <input type="text" name="name" value="<?php echo $userPersonalData["cell1"]; ?>"><br>
-                            <input type="text" name="name" value="<?php echo $userPersonalData["cell2"]; ?>">
+                            <input type="text" name="cell1" value="<?php echo $userPersonalData["cell1"]; ?>"><br>
+                            <input type="text" name="cell2" value="<?php echo $userPersonalData["cell2"]; ?>">
                         </td>
                     </tr>
                     <tr>
@@ -90,7 +104,7 @@ $userSocialData = $_SESSION["socialMedia"];
                            Bio
                         </td>
                         <td>
-                            <textarea rows="10" cols="60"><?php echo $userPersonalData["bio"]; ?></textarea>
+                            <textarea rows="10" cols="60" name="bio"><?php echo $userPersonalData["bio"]; ?></textarea>
                         </td>
                 </table>
                 </fieldset>

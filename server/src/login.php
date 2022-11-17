@@ -2,7 +2,6 @@
     require "../config/connect.php";
     session_start();
 
-    if (isset($_POST['code']) || isset($_POST['password'])) {
         $_code = $_POST["code"];
         $_password = hash("sha256", $_POST["password"]);
 
@@ -34,4 +33,4 @@
             }
         }
         $dbcon->close();
-}
+?>
