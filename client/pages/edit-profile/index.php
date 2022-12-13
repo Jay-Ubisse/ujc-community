@@ -28,7 +28,7 @@ $userSocialData = $_SESSION["socialMedia"];
         <aside class="w-[20%]">
             <?php include "../components/aside.php"; ?>
         </aside>
-        <article class="w-[80%] p-1 overflow-scroll">
+        <article class="w-[80%] p-1 overflow-y-scroll">
             <?php
                 if(isset($_SESSION["edit-error"]) ) {
                     echo $_SESSION["edit-error"];
@@ -36,18 +36,10 @@ $userSocialData = $_SESSION["socialMedia"];
                 } 
             ?>
             <h1 class="w-fit mx-auto font-bold text-3xl my-5">Editar dados</h1>
-            <form method="post" action="../../../server/src/edit-profile.php" enctype="multipart/form-data" class="w-11/12 mx-auto">
+            <form method="post" action="../../../server/src/edit-profile.php" enctype="multipart/form-data" autocomplete="off" class="w-11/12 mx-auto">
                 <fieldset>
-                    <legend class="font-bold text-xl mb-4">Dados pessoais</legend>
+                    <legend class="font-bold text-xl mb-4">Informação Pessoal e Contactos</legend>
                     <table class=" w-fit mx-auto">
-                    <tr>
-                        <td>
-                            Foto de perfil
-                        </td>
-                        <td>
-                            <input type="file" name="image">
-                        </td>
-                    </tr>
                     <tr>
                         <td>
                             Nome
@@ -62,15 +54,6 @@ $userSocialData = $_SESSION["socialMedia"];
                         </td>
                         <td>
                             <input type="text" name="email" value="<?php echo $userPersonalData["email"]; ?>">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Celular
-                        </td>
-                        <td>
-                            <input type="text" name="cell1" value="<?php echo $userPersonalData["cell1"]; ?>"><br>
-                            <input type="text" name="cell2" value="<?php echo $userPersonalData["cell2"]; ?>">
                         </td>
                     </tr>
                     <tr>
@@ -106,10 +89,73 @@ $userSocialData = $_SESSION["socialMedia"];
                         <td>
                             <textarea rows="10" cols="60" name="bio"><?php echo $userPersonalData["bio"]; ?></textarea>
                         </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Celular
+                        </td>
+                        <td>
+                            <input type="text" name="cell1" value="<?php echo $userPersonalData["cell1"]; ?>"><br>
+                            <input type="text" name="cell2" value="<?php echo $userPersonalData["cell2"]; ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Facebook
+                        </td>
+                        <td>
+                            <input type="text" name="facebook" value="<?php echo $userSocialData["facebook"]; ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Twitter
+                        </td>
+                        <td>
+                            <input type="text" name="twitter" value="<?php echo $userSocialData["twitter"]; ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Instagram
+                        </td>
+                        <td>
+                            <input type="text" name="instagram" value="<?php echo $userSocialData["instagram"]; ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Youtube
+                        </td>
+                        <td>
+                            <input type="text" name="youtube" value="<?php echo $userSocialData["youtube"]; ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            GitHub
+                        </td>
+                        <td>
+                            <input type="text" name="github" value="<?php echo $userSocialData["github"]; ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Medium
+                        </td>
+                        <td>
+                            <input type="text" name="medium" value="<?php echo $userSocialData["medium"]; ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           Site
+                        </td>
+                        <td>
+                            <input type="text" name="site" value="<?php echo $userSocialData["site"]; ?>">
+                        </td>
+                    </tr>
                 </table>
-                </fieldset>
-                <fieldset>
-                    <legend class="font-bold text-xl mb-4">Contactos</legend>
                 </fieldset>
                 <input type="submit" value="Guardar" class="bg-orange-500 text-white font-semibold py-2 px-5 rounded-md mt-3 cursor-pointer">
             </form>

@@ -44,7 +44,7 @@ session_start();
                 } 
             ?>
 
-        <form method="post" action="../../../server/src/login.php" class="bg-slate-400 py-10 md:w-2/4 w-11/12 mx-auto rounded-md" id="signin">
+        <form method="post" action="../../../server/src/login.php" autocomplete="off" class="bg-slate-400 py-10 md:w-2/4 w-11/12 mx-auto rounded-md" id="signin">
             <fieldset class="md:w-fit w-[89%] mx-auto">
                 <label for="code" class="font-semibold md:ml-0 ml-2">Código de estudante</label>
                 <input type="number" name="code" class="mb-3 ml-2 bg-slate-200 rounded-sm px-2 focus:outline-orange-500"><br>

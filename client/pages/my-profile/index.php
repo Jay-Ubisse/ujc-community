@@ -32,7 +32,7 @@ $profPicDir = "../../img/profile/"
         <aside class="w-[20%]">
             <?php include "../components/aside.php"; ?>
         </aside>
-        <article class="w-[80%] p-1 overflow-scroll">
+        <article class="w-[80%] p-1 overflow-y-scroll">
             <div class="w-4/5 mx-auto mt-5">
                 <section class="flex flex-row gap-5">
                     <div class="h-36 w-36 rounded-full bg-black text-slate-200 mt-2 flex  items-center justify-center">
@@ -116,7 +116,7 @@ $profPicDir = "../../img/profile/"
                                 Facebook
                             </td>
                             <td class="py-3 font-normal text-base">
-                                <a href="<?php echo $userSocialData["facebook-url"]; ?>"><?php echo $userSocialData["facebook-url"]; ?></a>
+                                <a class="hover:text-orange-500" href="<?php echo $userSocialData["facebook"]; ?>"><?php echo $userSocialData["facebook"]; ?></a>
                                 
                             </td>
                         </tr>
@@ -124,8 +124,8 @@ $profPicDir = "../../img/profile/"
                             <td class="py-3 font-semibold text-base">
                                 Twitter
                             </td>
-                            <td class="py-3 font-normal text-base">
-                            <a href="<?php echo $userSocialData["twitter-url"]; ?>"><?php echo $userSocialData["twitter-url"]; ?></a>
+                            <td class="py-3 font-normal text-base hover:text-orange-500">
+                            <a class="hover:text-orange-500" href="<?php echo $userSocialData["twitter"]; ?>"><?php echo $userSocialData["twitter"]; ?></a>
                             </td>
                         </tr>
                         <tr>
@@ -133,15 +133,15 @@ $profPicDir = "../../img/profile/"
                                 Instagram
                             </td>
                             <td class="py-3 font-normal text-base">
-                                <a href="<?php echo $userSocialData["instagram-url"]; ?>"><?php echo $userSocialData["instagram-url"]; ?></a>
+                                <a class="hover:text-orange-500" href="<?php echo $userSocialData["instagram"]; ?>"><?php echo $userSocialData["instagram"]; ?></a>
                             </td>
                         </tr>
                         <tr>
                             <td class="py-3 font-semibold text-base">
-                                Youtube
+                                YouTube
                             </td>
                             <td class="py-3 font-normal text-base">
-                                <a href="<?php echo $userSocialData["youtube-url"]; ?>"><?php echo $userSocialData["youtube-url"]; ?></a>
+                                <a class="hover:text-orange-500" href="<?php echo $userSocialData["youtube"]; ?>"><?php echo $userSocialData["youtube"]; ?></a>
                             </td>
                         </tr>
                         <tr>
@@ -149,7 +149,7 @@ $profPicDir = "../../img/profile/"
                                 GitHub
                             </td>
                             <td class="py-3 font-normal text-base">
-                                <a href="<?php echo $userSocialData["github-url"]; ?>"><?php echo $userSocialData["github-url"]; ?></a>
+                                <a class="hover:text-orange-500" href="<?php echo $userSocialData["github"]; ?>"><?php echo $userSocialData["github"]; ?></a>
                             </td>
                         </tr>
                         <tr>
@@ -157,7 +157,15 @@ $profPicDir = "../../img/profile/"
                                 Medium
                             </td>
                             <td class="py-3 font-normal text-base">
-                                <a href="<?php echo $userSocialData["medium-url"]; ?>"><?php echo $userSocialData["medium-url"]; ?></a>
+                                <a class="hover:text-orange-500" href="<?php echo $userSocialData["medium"]; ?>"><?php echo $userSocialData["medium"]; ?></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 font-semibold text-base">
+                                Site
+                            </td>
+                            <td class="py-3 font-normal text-base">
+                                <a class="hover:text-orange-500" href="<?php echo $userSocialData["site"]; ?>"><?php echo $userSocialData["site"]; ?></a>
                             </td>
                         </tr>
                     </table>

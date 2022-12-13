@@ -43,6 +43,7 @@
                 $_course = $_POST["course"];
                 $_level = $_POST["level"];
                 $_password = hash("sha256", $_POST["password"]);
+                $status = "Offline";
 
                 $check_query = "SELECT * FROM users where code = $_code";
                 $check_result = $dbcon->query($check_query);
@@ -57,8 +58,8 @@
                     </div>
                 <?php
                 } else {
-                    $save_query = "INSERT INTO users (code, name, email, course, level, password) 
-                                    VALUES ($_code, '$_name', '$_email', '$_course', '$_level', '$_password')";
+                    $save_query = "INSERT INTO users (code, name, course, level, email, password, status) 
+                                    VALUES ($_code, '$_name', '$_course', '$_level', '$_email', '$_password', '$status')";
                     $check_result = $dbcon->query($save_query);
                 ?>
                     <div class='bg-green-400 rounded-md w-1/3 mx-auto py-4 mb-2 flex flex-col items-center'>
@@ -70,7 +71,7 @@
                 $dbcon->close();
             }
         ?>
-        <form method="post" action="index.php" class="bg-slate-400 py-10 md:w-2/4 w-11/12 mx-auto rounded-md" id="signup">
+        <form method="post" action="index.php" autocomplete="off" class="bg-slate-400 py-10 md:w-2/4 w-11/12 mx-auto rounded-md" id="signup">
             <fieldset class="md:w-fit w-[89%] mx-auto">
                 <label for="name" class="font-semibold md:ml-0 ml-2">Nome</label>
                 <input type="text" name="name" class="mb-3 ml-2 bg-slate-200 rounded-sm px-2 focus:outline-orange-500"><br>

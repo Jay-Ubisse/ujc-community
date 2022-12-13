@@ -20,6 +20,10 @@
                 $_SESSION['auth'] = "Palavra-passe inválida!";
                 header("location: ../../client/pages/login");
             } else {
+                //update the status to online
+                $status = "Online";
+                $updateQuery = "UPDATE users SET status = '{$status}' WHERE code = {$_code}";
+                $updateQueryResult = $dbcon->query($updateQuery);
 
                 //getting user social media data
                 $fetchUserSocialQuery = "SELECT * FROM social where code = $_code";

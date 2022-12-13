@@ -20,27 +20,29 @@ $userSocialData = $_SESSION["socialMedia"];
     <link href="../../styles/output.css" rel="stylesheet">
     <script src="../../scripts/js/jquery-3.6.0.js"></script>
     <script src="../../scripts/js/global.js"></script>
+    <script src="../../scripts/js/messages.js"></script>
+    
 </head>
 
 <body>
-    <h2>The XMLHttpRequest Object</h2>
-
-    <div id="demo">
-        <p>Let AJAX change this text.</p>
-        <button type="button" onclick="loadDoc()">Change Content</button>
-    </div>
-
-    <script>
-        function loadDoc() {
-            const xhttp = new XMLHttpRequest();
-
-            xhttp.onload = function() {
-                document.getElementById("demo").innerHTML = this.responseText;
-            }
-            xhttp.open("GET", "script.php");
-            xhttp.send();
-        }
-    </script>
+    <header>
+        <?php include "../components/header.php"; ?>
+    </header>
+    <main class="bg-slate-200 h-[calc(100vh-64px)] flex flex-row gap-3">
+        <aside class="w-[20%] h-full flex flex-col bg-orange-500 mt-1 px-3">
+            <div>
+                <a href="../home/">Voltar</a>
+            </div>
+            <div class="search">
+                <span class="text">Select an user to start chat</span>
+                <input type="text" placeholder="Enter name to search...">
+                <button onclick="searchBar()"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="users">
+        
+            </div>
+        </aside>
+    </main>
 </body>
 
 </html>
